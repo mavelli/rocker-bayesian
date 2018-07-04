@@ -11,9 +11,12 @@ This is a Docker Image for a RStudio environement based on
 * [rjags](https://cran.r-project.org/web/packages/rjags/index.html)
 * [R2jags](https://cran.r-project.org/web/packages/R2jags/index.html)
 * [RStan](http://mc-stan.org/users/interfaces/rstan)
+* [rstanarm](https://cran.r-project.org/web/packages/rstanarm/index.html)
 * [INLA](http://www.r-inla.org/)
 * [OpenBUGS](http://www.openbugs.net)
 * [R2OpenBUGS](https://cran.r-project.org/web/packages/R2OpenBUGS/index.html)
-
+* [bayesplot](https://github.com/stan-dev/bayesplot)
+* [tidybayes](https://github.com/mjskay/tidybayes)
+* [brms](https://github.com/paul-buerkner/brms)
 
 
