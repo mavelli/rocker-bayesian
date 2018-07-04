@@ -11,10 +11,20 @@ RUN wget -nd -P /tmp http://pj.freefaculty.org/Debian/squeeze/amd64/openbugs_3.2
 RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.deb 
 
 RUN install2.r --error \
-  R2jags \
-  rjags \
+  --repos "https://cloud.r-project.org" \
+  --deps "TRUE" \
+  brms \
+  bayesplot \
+  R2jags \  
+  R2OpenBUGS \
   rgdal \
-  R2OpenBUGS 
+  rjags \
+  rstan \
+  rstanarm 
   
-RUN R -e "install.packages('rstan', repos = 'https://cloud.r-project.org/', dep = TRUE)"
-RUN R -e "install.packages('INLA', repos = c(getOption('repos'), INLA = 'https://inla.r-inla-download.org/R/stable'), dep = TRUE)"
+RUN install2.r --error \
+  --repos c(getOption('repos'), INLA = 'https://inla.r-inla-download.org/R/stable') \
+  INLA
+  
+RUN R -e "library(devtools); devtools::install_github('mjskay/tidybayes')"
+ 
