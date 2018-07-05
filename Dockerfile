@@ -23,7 +23,7 @@ RUN install2.r --error \
   rstanarm 
   
 RUN install2.r --error \
-  --repos "c(getOption('repos'), INLA = 'https://inla.r-inla-download.org/R/stable')" \
+  --repos "https://inla.r-inla-download.org/R/stable" \
   INLA
   
 RUN R -e "library(devtools); devtools::install_github('mjskay/tidybayes')"
