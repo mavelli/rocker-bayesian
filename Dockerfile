@@ -12,7 +12,6 @@ RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.de
 
 RUN install2.r --error \
   --repos "https://cloud.r-project.org" \
-  --deps "TRUE" \
   brms \
   bayesplot \
   R2jags \  
