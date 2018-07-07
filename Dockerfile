@@ -11,7 +11,7 @@ RUN wget -nd -P /tmp http://pj.freefaculty.org/Debian/squeeze/amd64/openbugs_3.2
 RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.deb 
 
 RUN install2.r --error \
-  --repos "https://cloud.r-project.org" \
+  --repos "https://stat.ethz.ch/CRAN/" \
   brms \
   bayesplot \
   R2jags \  
