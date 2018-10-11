@@ -10,6 +10,16 @@ RUN apt-get update \
 RUN wget -nd -P /tmp http://pj.freefaculty.org/Debian/squeeze/amd64/openbugs_3.2.2-1_amd64.deb
 RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.deb 
 
+# adding deps separately so it may build in dockerhub (works on my WS)
+RUN install2.r --error \
+  --repos "https://stat.ethz.ch/CRAN/" \
+  StanHeaders \
+  inline \
+  gridExtra \
+  BH \
+  Rcpp \
+  RcppEigen
+
 RUN install2.r --error \
   --repos "https://stat.ethz.ch/CRAN/" \
   rstan \
