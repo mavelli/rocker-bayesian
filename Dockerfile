@@ -7,11 +7,11 @@ RUN apt-get update \
   mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
   libc6-i386
 
-RUN wget -nd -P /tmp http://pj.freefaculty.org/Debian/squeeze/amd64/openbugs_3.2.2-1_amd64.deb
-RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.deb 
-
-# adding deps separately so it may build in dockerhub (works on my WS)
-RUN apt-get install -y r-cran-rcpp r-cran-rcppeigen
+RUN wget -nd -P /tmp https://www.mrc-bsu.cam.ac.uk/wp-content/uploads/2018/04/OpenBUGS-3.2.3.tar.gz
+RUN tar -xvzf /tmp/OpenBUGS-3.2.3.tar.gz
+RUN ./configure
+RUN make
+RUN sudo make install
 
 RUN install2.r --error \
   --repos "https://stat.ethz.ch/CRAN/" \
@@ -30,5 +30,5 @@ RUN install2.r --error \
   rgdal 
   
 RUN install2.r --error \
-  --repos "https://inla.r-inla-download.org/R/stable" \
+  --repos "https://inla.r-inla-download.org/R/testing" \
   INLA 
