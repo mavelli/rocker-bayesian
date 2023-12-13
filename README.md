@@ -4,8 +4,6 @@
 
 [![](https://images.microbadger.com/badges/version/mavelli/rocker-bayesian.svg)](https://microbadger.com/images/mavelli/rocker-bayesian "Get your own version badge on microbadger.com") - [![](https://images.microbadger.com/badges/image/mavelli/rocker-bayesian.svg)](https://microbadger.com/images/mavelli/rocker-bayesian "Get your own image badge on microbadger.com")
 
-Tags 3.3 and 3.4 are also provided for your convenience but are not fully tested. 
-Tag 3.5 ~ latest
 
 ## What is inside
 This is a Docker Image for a RStudio environement based on 
