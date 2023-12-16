@@ -1,6 +1,7 @@
 # rocker-bayesian
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![ci](https://github.com/mavelli/rocker-bayesian/actions/workflows/main.yml/badge.svg)](https://github.com/mavelli/rocker-bayesian/actions/workflows/main.yml)
 
 [![](https://images.microbadger.com/badges/version/mavelli/rocker-bayesian.svg)](https://microbadger.com/images/mavelli/rocker-bayesian "Get your own version badge on microbadger.com") - [![](https://images.microbadger.com/badges/image/mavelli/rocker-bayesian.svg)](https://microbadger.com/images/mavelli/rocker-bayesian "Get your own image badge on microbadger.com")
 
