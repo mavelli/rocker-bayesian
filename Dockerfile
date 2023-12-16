@@ -9,10 +9,9 @@ RUN apt-get update \
 
 RUN wget -nd -P /tmp https://www.mrc-bsu.cam.ac.uk/wp-content/uploads/2018/04/OpenBUGS-3.2.3.tar.gz
 RUN tar -xvzf /tmp/OpenBUGS-3.2.3.tar.gz
-RUN cd OpenBUGS-3.2.3
-RUN ./configure
-RUN make
-RUN sudo make install
+RUN cd OpenBUGS-3.2.3 && ./configure
+RUN cd OpenBUGS-3.2.3 && make
+RUN cd OpenBUGS-3.2.3 && sudo make install
 
 RUN install2.r --error \
   --repos "https://stat.ethz.ch/CRAN/" \
