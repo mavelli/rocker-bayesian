@@ -27,8 +27,7 @@ RUN install2.r --error \
   --repos "https://stat.ethz.ch/CRAN/" \
   rjags \
   R2jags \  
-  R2OpenBUGS \
-  rgdal 
+  R2OpenBUGS 
   
 RUN install2.r --error \
   --repos "https://inla.r-inla-download.org/R/testing" \
