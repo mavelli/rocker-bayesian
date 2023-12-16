@@ -5,7 +5,8 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
   jags \
   mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
-  libc6-i386
+  libc6-i386 \
+  build-essential
 
 RUN wget -nd -P /tmp https://www.mrc-bsu.cam.ac.uk/wp-content/uploads/2018/04/OpenBUGS-3.2.3.tar.gz
 RUN tar -xvzf /tmp/OpenBUGS-3.2.3.tar.gz
