@@ -21,14 +21,16 @@ RUN install2.r --error \
   rstanarm \
   bayesplot \
   brms \
-  tidybayes
+  tidybayes \
+  sp \
+  fmesher
   
 RUN install2.r --error \
   --repos "https://stat.ethz.ch/CRAN/" \
   rjags \
   R2jags \  
   R2OpenBUGS 
-  
+
 RUN install2.r --error \
   --repos "https://inla.r-inla-download.org/R/testing" \
   INLA 
