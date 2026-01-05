@@ -8,17 +8,20 @@
 
 ## What is inside
 This is a Docker Image for a RStudio environement based on 
-[rocker/verse](https://hub.docker.com/r/rocker/verse/) from the awesome [Rocker Project](https://www.rocker-project.org/) with the following Tools added for Bayesian modelling:
+[rocker/verse](https://hub.docker.com/r/rocker/verse/) from the awesome [Rocker Project](https://www.rocker-project.org/) with the following Tools added for Bayesian modelling and visualisation:
 
 * [JAGS is Just Another Gibbs Sampler](http://mcmc-jags.sourceforge.net/)  
 * [rjags](https://cran.r-project.org/web/packages/rjags/index.html)
 * [R2jags](https://cran.r-project.org/web/packages/R2jags/index.html)
+* [blavaan] (https://cran.r-project.org/web/packages/blavaan/index.html)
+* [posterior] (https://cran.r-project.org/web/packages/posterior/index.html)
 * [RStan](http://mc-stan.org/users/interfaces/rstan)
 * [rstanarm](https://cran.r-project.org/web/packages/rstanarm/index.html)
 * [INLA](http://www.r-inla.org/)
-* [OpenBUGS](http://www.openbugs.net)
+* [OpenBUGS](https://github.com/chjackson/openbugsdoc)
 * [R2OpenBUGS](https://cran.r-project.org/web/packages/R2OpenBUGS/index.html)
 * [bayesplot](https://github.com/stan-dev/bayesplot)
+* [ggdist] (https://cran.r-project.org/web/packages/ggdist/index.html)
 * [tidybayes](https://github.com/mjskay/tidybayes)
 * [brms](https://github.com/paul-buerkner/brms)
 
@@ -40,3 +43,12 @@ connect to rstudio in a webbrowser at
 ```url
 localhost:8787
 ```
+
+## How to build it
+Addapt the Dockerfile
+```bash
+make build
+```
+wait, it takes around 700 s for me to build it from scratch (without pulling).
+
+enjoy

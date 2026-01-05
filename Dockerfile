@@ -21,6 +21,7 @@ RUN cd OpenBUGS-3.2.3 && sudo make install
 
 RUN install2.r --error \
   -n -1 \
+  posterior \
   rstan \
   rstantools \ 
   rstanarm \
@@ -31,7 +32,9 @@ RUN install2.r --error \
   fmesher  \
   rjags \
   R2jags \  
+  blavaan \
   R2OpenBUGS \
   MatrixModels \
-  INLA 
+  INLA \
+  ggdist
   
